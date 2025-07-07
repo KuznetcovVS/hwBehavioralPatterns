@@ -39,21 +39,19 @@ public class Person {
         return age;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    // Изменяем модификатор доступа на protected
-    protected void setAddress(String address) {
-        this.address = address;
-    }
-
-    // Изменяем модификатор доступа на protected
     protected void setAge(int age) {
         if (age < 0) {
             throw new IllegalArgumentException("Возраст не может быть отрицательным");
         }
         this.age = OptionalInt.of(age);
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    protected void setAddress(String address) {
+        this.address = address;
     }
 
     public void happyBirthday() {

@@ -3,7 +3,7 @@ package ru.netology;
 public class PersonBuilder {
     private String name;
     private String surname;
-    private Integer age; // Используем Integer для проверки на null
+    private Integer age;
     private String address;
 
     public PersonBuilder setName(String name) {
@@ -36,11 +36,11 @@ public class PersonBuilder {
 
         Person person = new Person(name, surname);
 
-        if (age != null) { // Если возраст был установлен
+        if (age != null) {
             person.setAge(age);
         }
 
-        if (address != null) { // Если адрес был установлен
+        if (address != null) {
             person.setAddress(address);
         }
 
